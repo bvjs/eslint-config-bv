@@ -1,0 +1,27 @@
+{
+  "name": "eslint-config-bv",
+  "version": "0.0.3",
+  "description": "eslint config",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bvjs/eslint-config-bv.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "eslint": ">= 5"
+  },
+  "bugs": {
+    "url": "https://github.com/bvjs/eslint-config-bv/issues"
+  },
+  "homepage": "https://github.com/bvjs/eslint-config-bv#readme",
+  "dependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint-plugin-html": "^5.0.5",
+    "eslint-plugin-react": "^7.13.0"
+  }
+}
