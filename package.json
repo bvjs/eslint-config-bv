@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-bv",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "eslint config",
   "main": "index.js",
   "keywords": [
@@ -10,13 +10,13 @@
     "eslint-config-bv"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint --fix \"./test/**/*.*\" --config \"./index.js\""
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bvjs/eslint-config-bv.git"
   },
-  "author": "",
+  "author": "雨后黄昏 <shihuajunze@163.com>",
   "license": "ISC",
   "peerDependencies": {
     "eslint": ">= 5"
@@ -29,5 +29,8 @@
     "babel-eslint": "^10.0.1",
     "eslint-plugin-html": "^5.0.5",
     "eslint-plugin-react": "^7.13.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0"
   }
 }

@@ -11,26 +11,13 @@ module.exports = {
     es6: true,
   },
   extends: 'eslint:recommended',
-  // required to lint *.vue files
+  // required to lint *.html files
   plugins: ['html', 'react'],
-  // check if imports actually resolve
-  // settings: {
-  // 	'import/resolver': {
-  // 		webpack: {
-  // 			config: 'build/webpack.base.conf.js',
-  // 		},
-  // 	},
-  // },
   // add your custom rules here
   rules: {
     //防止jsx组件变未定义
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
-    // don't require .vue extension when importing
-    // 'import/extensions': ['error', 'always', {
-    //     'js': 'never',
-    //     'vue': 'never'
-    // }],
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
     /*
@@ -140,9 +127,8 @@ module.exports = {
     // disallow initializing variables to undefined
     'no-undef-init': 'error',
     'no-undef': 'off',
-    // disallow the use of variables before they are defined
-    'no-use-before-define': 'error',
-
+    // 方法必需先定义，后使用，function定义除外
+    'no-use-before-define': ["error", { "functions": false, "classes": true }],
     /*
      * Node.js and CommonJS
      */
