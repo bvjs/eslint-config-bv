@@ -1,6 +1,10 @@
 
 const a = () => {
-  alert(0)
-}
+  alert(0);
+};
 
-a()
+a();
+
+const obj = {};
+const b = obj?.a?.b;
+alert(b);

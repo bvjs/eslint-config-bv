@@ -12,9 +12,17 @@ module.exports = {
   },
   extends: 'eslint:recommended',
   // required to lint *.html files
-  plugins: ['html', 'react'],
+  plugins: ['html', 'react', 'babel'],
   // add your custom rules here
   rules: {
+    'babel/new-cap': 1,
+    'babel/camelcase': 1,
+    'babel/no-invalid-this': 1,
+    'babel/object-curly-spacing': 1,
+    'babel/quotes': 1,
+    'babel/semi': 1,
+    'babel/no-unused-expressions': 1,
+    'babel/valid-typeof': 1,
     //防止jsx组件变未定义
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
@@ -128,7 +136,7 @@ module.exports = {
     'no-undef-init': 'error',
     'no-undef': 'off',
     // 方法必需先定义，后使用，function定义除外
-    'no-use-before-define': ["error", { "functions": false, "classes": true }],
+    'no-use-before-define': ['error', { 'functions': false, 'classes': true }],
     /*
      * Node.js and CommonJS
      */
